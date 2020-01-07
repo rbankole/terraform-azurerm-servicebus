@@ -41,6 +41,6 @@ resource "azurerm_servicebus_subscription" "subscription" {
   resource_group_name = local.rg_name
   namespace_name      = azurerm_servicebus_namespace.namespace.name
   topic_name          = element(azurerm_servicebus_topic.topic.*.name, count.index)
-  max_delivery_count  = 1
+  max_delivery_count  = var.servicebus_subscription_max_delivery_count
 }
 
