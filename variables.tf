@@ -27,7 +27,7 @@ variable "namespace_name" {
 
 variable "namespace_sku" {
   description = "Defines which tier to use. Options are basic, standard or premium"
-  default     = "standard"
+  default     = "basic"
 }
 
 variable "namespace_capacity" {
@@ -43,11 +43,17 @@ variable "redundency" {
 variable "queues" {
   description = "List of queues to create"
   type        = list(string)
-  default     = ["queue1"]
+  default     = []
 }
 
 variable "topics" {
   description = "List of topics to create"
   type        = list(string)
-  default     = ["topic1"]
+  default     = []
+}
+
+variable "servicebus_subscription_max_delivery_count" {
+  description = "The maximum number of deliveries"
+  type        = number
+  default     = 1
 }
