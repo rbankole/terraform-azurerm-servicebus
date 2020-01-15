@@ -1,6 +1,6 @@
 # terraform-azurerm-servicebus
 
-
+[![Build Status](https://dev.azure.com/jungodevops/Terraform/_apis/build/status/jungopro.terraform-azurerm-servicebus?branchName=master)](https://dev.azure.com/jungodevops/Terraform/_build/latest?definitionId=30&branchName=master)
 
 Terraform Module to Create a ServiceBus in Azure with (optional) queues and topics
 
